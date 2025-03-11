@@ -13,16 +13,12 @@ extension Main {
         var translationQueue = DispatchQueue(label: "com.translate.translationQueue")
 
         @Published var translatedText = ""
-        @Published var isTranslating = false
 
         func translate(input: String, from lang1: String, to lang2: String) {
             if input.isEmpty {
+                translatedText = ""
                 return
             }
-
-//            DispatchQueue.main.async {
-                self.isTranslating = true
-//            }
 
             if let t = task {
                 t.cancel()
@@ -52,7 +48,6 @@ extension Main {
 
                     DispatchQueue.main.async {
                         self.translatedText = result
-                        self.isTranslating = false
                     }
                 }
             }

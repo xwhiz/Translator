@@ -59,15 +59,14 @@ struct Main: View {
                                 .onChange(of: inputText) { _ in
                                     vm.translate(input: inputText, from: lang1, to: lang2)
                                 }
+                                .onSubmit {
+                                    print("Submitted")
+                                }
                         }
 
-                        if vm.isTranslating {
-                            ProgressView()
-                        } else {
-                            Text(vm.translatedText)
-                                .font(.title2)
-                                .foregroundStyle(.primary)
-                        }
+                        Text(vm.translatedText)
+                            .font(.title2)
+                            .foregroundStyle(.primary)
                     }
                     .padding(.horizontal)
                 }
