@@ -46,27 +46,23 @@ struct Main: View {
                     }
 
                     Section {
-                        ZStack(alignment: .topLeading) {
-                            if inputText.isEmpty {
-                                Text("Enter your text here...")
-                                    .foregroundColor(.gray)
-                                    .padding(.horizontal, 8)
-                                    .padding(.vertical, 12)
-                            }
-                            TextEditor(text: $inputText)
-                                .multilineTextAlignment(.leading)
-                                .font(.title2)
-                                .onChange(of: inputText) { _ in
-                                    vm.translate(input: inputText, from: lang1, to: lang2)
-                                }
-                                .onSubmit {
-                                    print("Submitted")
-                                }
-                        }
-
-                        Text(vm.translatedText)
+                        TextField("Enter your text here...", text: $inputText)
+                            .multilineTextAlignment(.leading)
                             .font(.title2)
-                            .foregroundStyle(.primary)
+                            .onSubmit {
+                                vm.isTranslating = true
+                                vm.translate(input: inputText, from: lang1, to: lang2)
+                            }
+
+                        if vm.isTranslating {
+                            ProgressView()
+                                .font(.title2)
+                                .foregroundStyle(.primary)
+                        } else {
+                            Text(vm.translatedText)
+                                .font(.title2)
+                                .foregroundStyle(.primary)
+                        }
                     }
                     .padding(.horizontal)
                 }

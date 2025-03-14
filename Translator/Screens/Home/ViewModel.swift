@@ -13,6 +13,8 @@ extension Main {
         var translationQueue = DispatchQueue(label: "com.translate.translationQueue")
 
         @Published var translatedText = ""
+        @Published var isTranslating = false
+        @Published var errorMessage: String?
 
         func translate(input: String, from lang1: String, to lang2: String) {
             if input.isEmpty {
@@ -36,7 +38,20 @@ extension Main {
                 return
             }
 
-            task = URLSession.shared.downloadTask(with: url) { localURL, _, _ in
+            task = URLSession.shared.downloadTask(with: url) { localURL, _, error in
+
+                if let error {
+                    DispatchQueue.main.async {
+                        self.isTranslating = false
+                        self.errorMessage = error.localizedDescription
+                    }
+                    return
+                } else {
+                    DispatchQueue.main.async {
+                        self.errorMessage = nil
+                    }
+                }
+
                 if let localURL, let string = try? String(contentsOf: localURL) {
                     let index = string.firstIndex(of: "\"")
                     let index2 = string.index(after: index!)
@@ -47,6 +62,7 @@ extension Main {
                     print("Result:", result)
 
                     DispatchQueue.main.async {
+                        self.isTranslating = false
                         self.translatedText = result
                     }
                 }
