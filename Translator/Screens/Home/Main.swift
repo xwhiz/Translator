@@ -12,8 +12,11 @@ struct Main: View {
 
     @State private var lang1: String = "en"
     @State private var lang2: String = "ur"
+    @State private var lastEditTime = Date()
 
     @ObservedObject private var vm = ViewModel()
+
+    let maxWaitForTranslation: Double = 1
 
     var body: some View {
         NavigationView {
@@ -46,13 +49,21 @@ struct Main: View {
                     }
 
                     Section {
-                        TextField("Enter your text here...", text: $inputText)
-                            .multilineTextAlignment(.leading)
-                            .font(.title2)
-                            .onSubmit {
-                                vm.isTranslating = true
-                                vm.translate(input: inputText, from: lang1, to: lang2)
+                        ZStack(alignment: .topLeading) {
+                            if inputText.isEmpty {
+                                Text("Enter your text here...")
+                                    .foregroundColor(.gray)
+                                    .padding(.horizontal, 8)
+                                    .padding(.vertical, 12)
                             }
+                            TextEditor(text: $inputText)
+                                .multilineTextAlignment(.leading)
+                                .font(.title2)
+                                .onChange(of: inputText) { _ in
+                                    lastEditTime = Date()
+                                    startTranslationTimer()
+                                }
+                        }
 
                         if vm.isTranslating {
                             ProgressView()
@@ -71,6 +82,15 @@ struct Main: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.gray.opacity(0.2))
+        }
+    }
+
+    func startTranslationTimer() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            if Date().timeIntervalSince(lastEditTime) >= 2 {
+                vm.isTranslating = true
+                vm.translate(input: inputText, from: lang1, to: lang2)
+            }
         }
     }
 }
