@@ -8,16 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		559AE5992D84817900F7962C /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 559AE5982D84817900F7962C /* KeyboardKit */; };
+		559AE5CF2D84AD3700F7962C /* TranslatorKeyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 559AE5C82D84AD3700F7962C /* TranslatorKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		559AE5CD2D84AD3700F7962C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5527E9682D805CCA008E6EF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 559AE5C72D84AD3700F7962C;
+			remoteInfo = TranslatorKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		559AE5D42D84AD3700F7962C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				559AE5CF2D84AD3700F7962C /* TranslatorKeyboard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5527E9702D805CCA008E6EF8 /* Translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		559AE5C82D84AD3700F7962C /* TranslatorKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TranslatorKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		559AE5D02D84AD3700F7962C /* Exceptions for "TranslatorKeyboard" folder in "TranslatorKeyboard" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 559AE5C72D84AD3700F7962C /* TranslatorKeyboard */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5527E9722D805CCA008E6EF8 /* Translator */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Translator;
+			sourceTree = "<group>";
+		};
+		559AE5C92D84AD3700F7962C /* TranslatorKeyboard */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				559AE5D02D84AD3700F7962C /* Exceptions for "TranslatorKeyboard" folder in "TranslatorKeyboard" target */,
+			);
+			path = TranslatorKeyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -31,6 +75,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		559AE5C52D84AD3700F7962C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -38,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				5527E9722D805CCA008E6EF8 /* Translator */,
+				559AE5C92D84AD3700F7962C /* TranslatorKeyboard */,
 				5527E9712D805CCA008E6EF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				5527E9702D805CCA008E6EF8 /* Translator.app */,
+				559AE5C82D84AD3700F7962C /* TranslatorKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,10 +113,12 @@
 				5527E96C2D805CCA008E6EF8 /* Sources */,
 				5527E96D2D805CCA008E6EF8 /* Frameworks */,
 				5527E96E2D805CCA008E6EF8 /* Resources */,
+				559AE5D42D84AD3700F7962C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				559AE5CE2D84AD3700F7962C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				5527E9722D805CCA008E6EF8 /* Translator */,
@@ -76,6 +131,28 @@
 			productReference = 5527E9702D805CCA008E6EF8 /* Translator.app */;
 			productType = "com.apple.product-type.application";
 		};
+		559AE5C72D84AD3700F7962C /* TranslatorKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 559AE5D12D84AD3700F7962C /* Build configuration list for PBXNativeTarget "TranslatorKeyboard" */;
+			buildPhases = (
+				559AE5C42D84AD3700F7962C /* Sources */,
+				559AE5C52D84AD3700F7962C /* Frameworks */,
+				559AE5C62D84AD3700F7962C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				559AE5C92D84AD3700F7962C /* TranslatorKeyboard */,
+			);
+			name = TranslatorKeyboard;
+			packageProductDependencies = (
+			);
+			productName = TranslatorKeyboard;
+			productReference = 559AE5C82D84AD3700F7962C /* TranslatorKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -87,6 +164,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					5527E96F2D805CCA008E6EF8 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					559AE5C72D84AD3700F7962C = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -109,12 +189,20 @@
 			projectRoot = "";
 			targets = (
 				5527E96F2D805CCA008E6EF8 /* Translator */,
+				559AE5C72D84AD3700F7962C /* TranslatorKeyboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5527E96E2D805CCA008E6EF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		559AE5C62D84AD3700F7962C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,7 +219,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		559AE5C42D84AD3700F7962C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		559AE5CE2D84AD3700F7962C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 559AE5C72D84AD3700F7962C /* TranslatorKeyboard */;
+			targetProxy = 559AE5CD2D84AD3700F7962C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5527E97C2D805CCB008E6EF8 /* Debug */ = {
@@ -258,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Translator/Translator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Translator/Preview Content\"";
@@ -277,7 +381,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.Translator;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Translator-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -290,6 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Translator/Translator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Translator/Preview Content\"";
@@ -309,8 +414,58 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.Translator;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Translator-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		559AE5D22D84AD3700F7962C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WJAJA42L99;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TranslatorKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TranslatorKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Translator-app.TranslatorKeyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		559AE5D32D84AD3700F7962C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WJAJA42L99;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TranslatorKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TranslatorKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Translator-app.TranslatorKeyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -334,6 +489,15 @@
 			buildConfigurations = (
 				5527E97F2D805CCB008E6EF8 /* Debug */,
 				5527E9802D805CCB008E6EF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		559AE5D12D84AD3700F7962C /* Build configuration list for PBXNativeTarget "TranslatorKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				559AE5D22D84AD3700F7962C /* Debug */,
+				559AE5D32D84AD3700F7962C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
