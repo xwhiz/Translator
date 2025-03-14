@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		559AE5992D84817900F7962C /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 559AE5982D84817900F7962C /* KeyboardKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		5527E9702D805CCA008E6EF8 /* Translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559AE5992D84817900F7962C /* KeyboardKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = Translator;
 			packageProductDependencies = (
+				559AE5982D84817900F7962C /* KeyboardKit */,
 			);
 			productName = Translator;
 			productReference = 5527E9702D805CCA008E6EF8 /* Translator.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 5527E9672D805CCA008E6EF8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				559AE5972D84817900F7962C /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5527E9712D805CCA008E6EF8 /* Products */;
 			projectDirPath = "";
@@ -330,6 +339,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		559AE5972D84817900F7962C /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		559AE5982D84817900F7962C /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 559AE5972D84817900F7962C /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5527E9682D805CCA008E6EF8 /* Project object */;
 }
