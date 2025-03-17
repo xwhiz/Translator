@@ -1,5 +1,5 @@
 //
-//  Keyboard+App.swift
+//  KeyboardApp+Translator.swift
 //  Translator
 //
 //  Created by truID on 14/03/2025.
@@ -22,16 +22,11 @@ extension KeyboardApp {
     /// an app and its keyboard. It doesn't work in the demo.
     ///
     /// See `DemoApp.swift` for more info about the demo app.
-    static var keyboard: KeyboardApp {
+    static var keyboard: Self {
         .init(
             name: "Translator",
-            // licenseKey: "299B33C6-061C-4285-8189-90525BCAF098",  // Sets up KeyboardKit Pro!
-            appGroupId: "group.ai.truid", // Sets up App Group data sync
-            locales: .keyboardKitSupported, // Sets up the enabled locales
-            deepLinks: .init(
-                app: "translatorapp://" // Defines how to open the app
-                // dictation: "kkdemo://dictation"                  // You can customize any default deep link
-            )
+            appGroupId: "group.ai.truid",
+            locales: .keyboardKitSupported
         )
     }
 }

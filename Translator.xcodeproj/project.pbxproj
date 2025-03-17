@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		559AE5992D84817900F7962C /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 559AE5982D84817900F7962C /* KeyboardKit */; };
 		559AE5CF2D84AD3700F7962C /* TranslatorKeyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 559AE5C82D84AD3700F7962C /* TranslatorKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		559AE5DD2D84B50700F7962C /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 559AE5DC2D84B50700F7962C /* KeyboardKit */; };
+		559AE5DF2D84B52700F7962C /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 559AE5DE2D84B52700F7962C /* KeyboardKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		559AE5D02D84AD3700F7962C /* Exceptions for "TranslatorKeyboard" folder in "TranslatorKeyboard" target */ = {
+		559AE5DA2D84B4DC00F7962C /* Exceptions for "TranslatorKeyboard" folder in "TranslatorKeyboard" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -59,7 +60,7 @@
 		559AE5C92D84AD3700F7962C /* TranslatorKeyboard */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				559AE5D02D84AD3700F7962C /* Exceptions for "TranslatorKeyboard" folder in "TranslatorKeyboard" target */,
+				559AE5DA2D84B4DC00F7962C /* Exceptions for "TranslatorKeyboard" folder in "TranslatorKeyboard" target */,
 			);
 			path = TranslatorKeyboard;
 			sourceTree = "<group>";
@@ -71,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				559AE5992D84817900F7962C /* KeyboardKit in Frameworks */,
+				559AE5DD2D84B50700F7962C /* KeyboardKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559AE5DF2D84B52700F7962C /* KeyboardKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +127,7 @@
 			);
 			name = Translator;
 			packageProductDependencies = (
-				559AE5982D84817900F7962C /* KeyboardKit */,
+				559AE5DC2D84B50700F7962C /* KeyboardKit */,
 			);
 			productName = Translator;
 			productReference = 5527E9702D805CCA008E6EF8 /* Translator.app */;
@@ -148,6 +150,7 @@
 			);
 			name = TranslatorKeyboard;
 			packageProductDependencies = (
+				559AE5DE2D84B52700F7962C /* KeyboardKit */,
 			);
 			productName = TranslatorKeyboard;
 			productReference = 559AE5C82D84AD3700F7962C /* TranslatorKeyboard.appex */;
@@ -181,7 +184,7 @@
 			mainGroup = 5527E9672D805CCA008E6EF8;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				559AE5972D84817900F7962C /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+				559AE5DB2D84B50700F7962C /* XCRemoteSwiftPackageReference "KeyboardKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5527E9712D805CCA008E6EF8 /* Products */;
@@ -364,7 +367,6 @@
 				CODE_SIGN_ENTITLEMENTS = Translator/Translator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Translator/Preview Content\"";
 				DEVELOPMENT_TEAM = WJAJA42L99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -383,6 +385,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Translator-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -397,7 +403,6 @@
 				CODE_SIGN_ENTITLEMENTS = Translator/Translator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Translator/Preview Content\"";
 				DEVELOPMENT_TEAM = WJAJA42L99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -416,6 +421,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Translator-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -431,12 +440,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TranslatorKeyboard/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TranslatorKeyboard;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Translator-app.TranslatorKeyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -456,12 +465,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TranslatorKeyboard/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TranslatorKeyboard;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Translator-app.TranslatorKeyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,7 +514,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		559AE5972D84817900F7962C /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+		559AE5DB2D84B50700F7962C /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit.git";
 			requirement = {
@@ -516,9 +525,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		559AE5982D84817900F7962C /* KeyboardKit */ = {
+		559AE5DC2D84B50700F7962C /* KeyboardKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 559AE5972D84817900F7962C /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			package = 559AE5DB2D84B50700F7962C /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
+		559AE5DE2D84B52700F7962C /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 559AE5DB2D84B50700F7962C /* XCRemoteSwiftPackageReference "KeyboardKit" */;
 			productName = KeyboardKit;
 		};
 /* End XCSwiftPackageProductDependency section */
